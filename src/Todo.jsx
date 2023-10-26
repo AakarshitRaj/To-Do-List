@@ -18,8 +18,13 @@ const Todo = () => {
 
          setinput("");// Clear the input field after adding an item.
     }
-    const deleteItems=()=>{
-        console.log('deleted')
+    const deleteItems=(id)=>{
+        // console.log('deleted')
+        setList((oldItems)=>{
+            return oldItems.filter((arrElem,index)=>{
+                return index!==id;
+            })
+        })
     }
 
   return (

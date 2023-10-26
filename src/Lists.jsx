@@ -9,7 +9,8 @@ const Lists = (props) => {
     <>
     <div className='todo_style'>
     <FontAwesomeIcon icon={faCircleXmark}
-        onClick={props.onSelect}
+        onClick={()=>{props.onSelect(props.id);
+        }}
         />
    <li>{props.text}</li>
    </div>
